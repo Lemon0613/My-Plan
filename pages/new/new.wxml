@@ -1,0 +1,34 @@
+<!--pages/new/new.wxml-->
+<view class="new-wrapper">
+  <view class="new-tips">* 计划名称请控制在15个字之内</view>
+  <view class="new-item">
+    <text>计划名称</text>
+    <input bindblur="planContent" type="text" placeholder="请填写"/>
+  </view>
+  <view class="new-item">
+    <text>计划分类</text>
+    <picker mode="selector" value="{{index}}" range="{{array}}" bindchange="bindCategory">
+       {{array[index]}}
+    </picker>
+    <span class="iconfont icon-enter"></span>
+  </view>
+  <view class="new-item">
+    <text>开始时间</text>
+    <picker mode="date" value="{{dateStart}}" start="2015-01-01" end="2020-12-31" bindchange="bindDateStart">
+      {{dateStart}}
+    </picker>
+    <span class="iconfont icon-enter"></span>
+  </view>
+  <view class="new-item">
+    <text>结束时间</text>
+    <picker mode="date" value="{{dateEnd}}" start="2015-01-01" end="2020-12-31" bindchange="bindDateEnd">
+      {{dateEnd}}
+    </picker>
+    <span class="iconfont icon-enter"></span>
+  </view>
+  <view class="new-item">
+    <text>备注</text>
+    <input bindblur="planRemark" type="text" placeholder="请选填"/>
+  </view>
+  <button bindtap="submitPlan" class="submit">添加</button>
+</view>

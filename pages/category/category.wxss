@@ -1,0 +1,115 @@
+/* pages/category/category.wxss */
+.cate-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.sort-bg {
+  width: 100%;
+  height: 380rpx;
+}
+.sort-bg > image {
+  width: 100%;
+  height: 100%;
+}
+.cate-bg {
+  width: 100%;
+  height: 700rpx;
+  background: rgba(37,41,50,1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.cate-bg::after {
+  content: '';
+  width: 100%;
+  height: 300rpx;
+  position: absolute;
+  top: -295rpx;
+  left: 0;
+  background: linear-gradient(to top, rgba(37,41,50,1),rgba(37,41,50,1),rgba(37,41,50,0));
+}
+.cate-con {
+  width: 86%;
+  height: 780rpx;
+  position: absolute;
+  left: 7%;
+  bottom: 55rpx;
+  border-radius: 30rpx;
+  background: #fff;
+}
+.cate-con::before {
+  content: '';
+  width: 150rpx;
+  border-left: solid 15rpx transparent;
+  border-right: solid 15rpx transparent;
+  border-bottom: solid 15rpx #000;
+  position: absolute;
+  top: -15rpx;
+  left: 50%;
+  margin-left: -90rpx;
+}
+.cate-title {
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 65rpx;
+  background: rgba(37,41,50,1);
+  position: absolute;
+  top: -15rpx;
+  left: 50%;
+  margin-left: -75rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+}
+.cate-main {
+  padding: 60rpx 30rpx;
+  overflow: auto;
+  overflow-x: hidden; 
+}
+.main-title {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #252932;
+  padding-top: 20rpx;
+}
+.cate-num {
+  height: 100rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #07c186;
+  text-align: center;
+}
+.cate-list {
+  padding-top: 10rpx;
+  height: 430rpx;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.cate-list > text {
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #252932; 
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cate-date {
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color: #797979;
+  font-size: 26rpx;
+}

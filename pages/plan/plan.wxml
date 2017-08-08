@@ -1,0 +1,22 @@
+<!--pages/plan/plan.wxml-->
+<view class="plan-container">
+  <swiper autoplay="{{autoplay}}" interval="4000" indicator-color="{{indicatoColor}}" class="swiper" indicator-dots="{{indicatorDots}}">
+    <block wx:for="{{imgUrls}}" wx:key="imgUrl">
+      <swiper-item class="item-image">
+        <image mode="aspectFill" src="{{item}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="category-wrapper">
+    <text class="cate-tit">我的计划主题</text>
+    <view class="category-con">
+      <view class="category-item" wx:for="{{category}}" wx:key="listCate" data-index="{{index}}" bindtap="pageToCate">
+        <view class="cate-image"><image src="{{item.url}}"></image></view>
+        <view class="cate-name">{{item.title}}</view>
+      </view>
+    </view>
+    <text class="bottom-tips">我有底线的，计划不要太多！</text>
+  </view>
+
+</view>

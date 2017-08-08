@@ -1,0 +1,133 @@
+/* pages/done/done.wxss */
+
+.done-container {
+  width: 100%;
+  min-height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.done-top {
+  width: 100%;
+  height: 360rpx;
+  background: rgba(7,17,27,0.4);
+}
+.done-bg {
+  width: 100%;
+  height: 360rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  -webkit-filter: blur(18rpx);
+  filter: blur(18rpx);
+}
+.done-bg image {
+  width: 100%;
+  height: 100%; 
+}
+.done-top-con {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.done-head {
+  width: 500rpx;
+  height: 150rpx;
+  position: absolute;
+  bottom: -60rpx;
+  right: 30rpx;
+}
+.header {
+  width: 136rpx;
+  height: 136rpx;
+  float: right;
+  overflow: hidden;
+  border: solid 4rpx #fff;
+}
+.user-name {
+  float: left;
+  width: 320rpx;
+  height: 136rpx;
+  line-height: 96rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #07c186;
+  text-align: right;
+  overflow: hidden;
+}
+.header image {
+  width: 100%;
+  height: 100%;
+}
+.plan-theme {
+  color: #fff;
+}
+.plan-theme > text {
+  display: block;
+  text-align: center;
+}
+.plan-theme .done-text {
+  width: 200rpx;
+  height: 50rpx;
+  font-size: 36rpx;
+  font-weight: 700; 
+}
+.plan-theme .done-num {
+  width: 116rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  margin: 0 auto;
+  font-size: 24rpx;
+  border-bottom: solid 1px #fff;
+}
+
+.time-line {
+  width: 100%;
+  padding: 0 30rpx 50rpx 45rpx;
+}
+.line-item {
+  width: 100%;
+  height: 136rpx;
+  border-left: solid 2rpx #f1f1f1; 
+  position: relative;
+}
+.line-item .line-cir {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 53rpx;
+  left: -15rpx;
+  font-size: 0; 
+}
+.line-cir image {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.line-item > text {
+  display: block;
+  text-indent: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.line-item .plan-name {
+  height: 112rpx;
+  line-height: 136rpx;
+  color: #000;
+  font-size: 32rpx;
+}
+.line-item .plan-time {
+  height: 24rpx;
+  line-height: 24rpx;
+  font-size: 24rpx;
+  color: #07c186;
+}

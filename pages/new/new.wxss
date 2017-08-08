@@ -1,0 +1,49 @@
+/* pages/new/new.wxss */
+.new-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #f0f1f5; 
+}
+.new-tips {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #ccc;
+}
+.new-item {
+  width: auto;
+  padding: 0 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #fff;
+  border-bottom: solid 1rpx #efefef;
+  display: -webkit-flex;
+  display: flex;
+}
+.new-item > text {
+  width: 200rpx;
+  height: 100rpx;
+  font-size: 32rpx;
+  color: #5e5e5e;
+}
+.new-item > input, .new-item > picker {
+  width: auto;
+  -webki-flex: 1;
+  flex: 1;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  color: #7a7a7a;
+  text-align: right;
+}
+.submit {
+  width: 80%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 50rpx auto;
+  background: #f7b53b;
+  border: none;
+  color: #fff;
+}

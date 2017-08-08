@@ -1,0 +1,256 @@
+/* pages/home/home.wxss */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; 
+  background: #efefef;
+}
+.top {
+  width: 100%;
+  height: 400rpx;
+  background: #07c186;
+  /* background: #1cdac9; */
+}
+.head-con {
+  padding-top: 30rpx;
+}
+.head-icon {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  border: solid 4rpx #fff;
+  background: #ccc;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.head-icon image {
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+}
+.head-con .nickname {
+  display: block;
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 30rpx;
+  color: #fff;
+}
+.menu-item {
+  width: 100%;
+  padding-top: 40rpx;
+}
+.menu-item ul {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+}
+.menu-item ul li {
+  width: 200rpx;
+  text-align: center;
+  color: #fff;
+}
+.menu-item ul li text:first-of-type {
+  width: 200rpx;
+  height: 50rpx;
+  display: block;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 700;
+}
+.menu-item ul li text:nth-child(2) {
+  display: block;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.plan-wrapper {
+  width: 100%;
+}
+.new-btn {
+  border-radius: 50%;
+  position: fixed;
+  top: 980rpx;
+  right: 50rpx;
+  text-align: center;
+  color: #ffc538;
+  overflow: hidden;
+  z-index: 100;
+  font-size: 0;
+}
+.new-btn span {
+  font-size: 100rpx;
+}
+.no-plan {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 50rpx;
+}
+.no-plan span {
+  display: block;
+  font-size: 250rpx;
+  color: #ccc;
+  text-align: center;
+}
+.no-plan text {
+  display: block;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #c1c1c1;
+}
+
+.plan-list {
+  width: 100%;
+  padding-top: 15rpx;
+}
+.plan-list .plan-item {
+  width: 100%;
+  height: 150rpx;
+  background: #fff;
+  margin-bottom: 15rpx;
+  position: relative;
+}
+.plan-item .pull-list {
+  width: 300rpx;
+  height: 150rpx;
+  line-height: 150rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  color: #fff;
+  font-size: 28rpx;
+}
+.pull-list .markfill {
+  width: 180rpx;
+  float: left;
+  background: #07c186;
+  text-align: center;
+}
+.pull-list .delete {
+  width: 120rpx;
+  float: left;
+  background: #ff423a;
+  text-align: center;
+}
+.plan-item > .list-con {
+  width: 100%;
+  height: 150rpx;
+  border-left: solid 10rpx #07c186;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.plan-item > .list-nocon {
+  width: 100%;
+  height: 150rpx;
+  border-left: solid 10rpx #ff423a;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.plan-item > .border-color {
+  border-left: solid 10rpx #ffc538;
+}
+.list-con .list-text, .list-nocon .list-text {
+  width: 70%;
+  float: left;
+  padding-left: 22rpx;
+  padding-top: 28rpx;
+}
+.list-text > text:first-of-type {
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #3e3e3e;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list-text > text:nth-child(2) {
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  letter-spacing: 1rpx;
+  color: #999;
+}
+.list-con .list-text > text:nth-child(2) text {
+  color: #07c186;
+}
+.list-nocon .list-text > text:nth-child(2) text {
+  color: #ff423a;
+}
+.border-color .list-text > text:nth-child(2) text {
+  color: #ffc538;
+}
+.list-con .time, .list-nocon .time {
+  float: right;
+  padding-top: 20rpx;
+  padding-right: 28rpx;  
+  color: #999;
+  font-size: 22rpx;
+}
+
+.show-model {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .6);
+  z-index: 9999;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.show-con {
+  width: 80%;
+  background: #fff;
+  border-radius: 12rpx;
+  position: absolute;
+  top: 28%;
+  left: 10%;
+}
+.show-con > text {
+  display: block;
+  padding: 0 30rpx;
+}
+.show-con .show-content {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.show-con .show-details {
+  line-height: 60rpx;
+  font-size: 26rpx;
+  color: #999;
+  /* overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; */
+}
+.show-sure {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: solid 1rpx #efefef;
+  text-align: center; 
+  font-size: 30rpx;
+  color: #07c186;
+  letter-spacing: 2rpx;
+  margin-top: 18rpx;
+}

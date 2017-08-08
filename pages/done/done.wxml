@@ -1,0 +1,23 @@
+<!--pages/done/done.wxml-->
+<view class="done-container">
+  <view class="done-top">
+    <view class="done-bg"><image src="{{userInfo.avatarUrl}}"></image></view>
+    <view class="done-top-con">
+      <view class="done-head">
+        <view class="user-name">{{userInfo.nickName}}</view>
+        <view class="header"><image src="{{userInfo.avatarUrl}}"></image></view>
+      </view>
+      <view class="plan-theme">
+        <text class="done-text">计划时间轴</text>
+        <text class="done-num">{{timeLine.length}}个计划</text>
+      </view>
+    </view>
+  </view>
+  <view class="time-line">
+    <view class="line-item" wx:for="{{timeLine}}" wx:key="line">
+      <view class="line-cir"><image src="/images/icon/{{planTip}}.png"></image></view>
+      <text class="plan-name">{{item.content}}</text>
+      <text class="plan-time" style="color: {{color}}">{{item.dateStart}}</text>
+    </view>
+  </view>
+</view>

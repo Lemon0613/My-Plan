@@ -1,0 +1,19 @@
+<!--pages/category/category.wxml-->
+<view class="cate-container" >
+  <view class="sort-bg">
+    <image src="/images/banner/theme0{{sortImg}}.jpg"></image>
+  </view>
+  <view class="cate-bg"></view>
+  <view class="cate-con">
+    <view class="cate-title">{{cateTitle}}</view>
+    <view class="tips"></view>
+    <view class="cate-main">
+      <view class="main-title">{{mainTitle}}</view>
+      <view class="cate-num">共{{cateList.length}}项</view>
+      <view class="cate-list">
+        <text wx:for="{{cateList}}">{{item.content}}</text>
+      </view>
+    </view>
+    <view class="cate-date">更新于{{cateDate}}</view>
+  </view>
+</view>

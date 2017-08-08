@@ -1,0 +1,82 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <view class="top">
+      <view class="head-con">
+        <view class="head-icon">
+          <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <text class="nickname">{{userInfo.nickName}}</text>
+      </view>
+      <view class="menu-item">
+        <ul>
+          <li>
+            <text>{{planList.length}}</text>
+            <text>进行中</text>
+          </li>
+          <li>
+            <text>{{planList.length + fillNum}}</text>
+            <text>My Plan</text>
+          </li>
+          <li>
+            <text>{{fillNum}}</text>
+            <text>已完成</text>
+          </li>
+        </ul>
+      </view>
+  </view>
+  <view class="plan-wrapper">
+    <view class="new-btn" bindtap="pageToNew">
+      <span class="iconfont icon-addition_fill"></span>
+    </view>
+    <view class="no-plan" wx:if="{{planList.length == 0}}">
+      <span class="iconfont icon-31wentifankui"></span>
+      <text>还没有计划，快去新建一条吧</text>
+    </view> 
+    <view class="plan-list">
+      <view class="plan-item"  wx:for="{{planList}}" wx:key="listUpdate">
+        <view class="pull-list">
+          <view bindtap="fillItem" data-index="{{index}}" class="markfill">标记完成</view>
+          <view bindtap="delItem" data-index="{{index}}" class="delete">删除</view>
+        </view>
+        <!-- 正常周期 -->
+        <view bindtap="showDetail" class="list-con" wx:if="{{item.remainDay > 0}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="{{item.txtStyle}}"  data-index="{{index}}">
+          <view class="list-text">
+            <text>{{item.content}}</text>
+            <text>周期<text>{{item.day}}</text>天 剩余<text>{{item.remainDay}}</text>天</text>
+          </view>
+          <view class="time">{{item.time}}</view>
+        </view>
+        <!-- 最后一天 -->
+        <view bindtap="showDetail" class="list-con border-color" wx:if="{{item.remainDay == 0}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="{{item.txtStyle}}"  data-index="{{index}}">
+          <view class="list-text">
+            <text>{{item.content}}</text>
+            <text>周期<text>{{item.day}}</text>天 <text>最后一天</text></text>
+          </view>
+          <view class="time">{{item.time}}</view>
+        </view>
+        <!-- 未完成 -->
+        <view bindtap="showDetail" class="list-nocon" wx:if="{{item.remainDay < 0}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="{{item.txtStyle}}"  data-index="{{index}}">
+          <view class="list-text">
+            <text>{{item.content}}</text>
+            <text>周期<text>{{item.day}}</text>天 <text>未完成</text></text>
+          </view>
+          <view class="time">{{item.time}}</view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+  <view class="show-model" wx:if="{{showModels}}">
+    <view class="show-con">
+      <text class="show-content">计划详情</text>
+      <text class="show-details">主题：{{showContent}}</text>
+      <text class="show-details">创建于：{{showDT}}</text>
+      <text class="show-details">截止于：{{showDL}}</text>
+      <text class="show-details">备注：{{showRemark}}</text>
+      <view class="show-sure" bindtap="closedetails">确定</view>
+    </view>
+  
+  </view>
+
+</view>
